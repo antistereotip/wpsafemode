@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WP Safemode</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/foundation.css" />
+
+<link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/vendor/modernizr.js"></script>
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+  </head>
+  <body>
+
+  <nav class="top-bar" data-topbar role="navigation" id="main-navigation">
+  <div class="row">
+  	<div class="columns large-2">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="http://wpsafemode.com/" target="_blank" class="safemode-logo" title="Free WordPress administration tool" >Wordpress SafeMode</a></h1>
+    </li>
+  
+  </ul>
+</div>
+	<div class="columns large-2 version">
+		<p class="small">v. 0.02 beta</p>
+	</div>
+	<div class="columns large-2"></div>
+	<div class="columns large-6">
+	<form action="" method="post" class="signup-form">
+		     	 <div class="row collapse postfix-radius signup">
+			        <div class="large-4 columns">
+			          <input type="text"  class="contact-name" name="contact_name" placeholder="Name" value="">
+			          			        </div>
+			        <div class="large-5 columns">
+			          <input type="email" class="contact-email" name="contact_email" placeholder="Email" value="">
+			           			        </div>
+			        <div class="large-3 columns">
+			          <input type="submit" name="send" class="postfix button" value="Submit">
+			        </div>
+			      </div>
+			      <div class="row signup-info">
+				  	<div class="columns large-12">
+				  	<p class="small">Subscribe get a download and help us improve our tool, or just help us spread the love on social networks.</p>
+				  	</div>
+				  </div>
+		     </form>	
+		
+	</div>
+  </div>
+  </nav>
+<div class="row" id="main-content">
+	<div class="columns large-3">
+	<div class="fill-blank columns large-12"></div>
+<div id="main-side-nav" class="panel fixed">
+<ul class="custom-side-nav" >
+  <li class=""> <h3 class="title">Dashboard</h3> </li>
+  <li class="<?php echo (isset($data['current_page']) && $data['current_page'] == 'wpconfig')?'active':''; ?>">
+  <a class="icons icon-config" href="?view=wpconfig">Configuration File</a>
+  </li>
+  <li class="<?php echo (isset($data['current_page']) && $data['current_page'] == 'themes')?'active':''; ?>">
+  <a class="icons icon-themes" href="?view=themes">Themes</a></li>
+  <li class="<?php echo (isset($data['current_page']) && $data['current_page'] == 'plugins')?'active':''; ?>">
+  <a class="icons icon-plugins" href="?view=plugins">Plugins</a></li>
+  <li class="<?php echo (isset($data['current_page']) && $data['current_page'] == 'backup_files')?'active':''; ?>">
+  <a  class="icons icon-backup-files" href="?view=backup_files">Backup Files</a></li>
+  <li class="<?php echo (isset($data['current_page']) && $data['current_page'] == 'backup_database')?'active':''; ?>">
+  <a  class="icons icon-backup-database" href="?view=backup_database">Backup Database</a></li>
+ 
+</ul>
+  </div>
+  </div>
+  	<div class="columns large-9">
+
+  	<?php if(isset($data['message'])): ?>
+  	 <div class="row">
+  	   <div class="columns large-12">
+  	     <div class="alert-box [radius round]" data-alert>
+  		<?php echo $data['message'] ?><a href="#" class="close">&times;</a>
+     	</div>
+  	   </div>
+  	 </div>
+  	<?php endif; ?>
+  	

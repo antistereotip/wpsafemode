@@ -1,0 +1,88 @@
+Wordpress safe mode v0.04 beta
+-----------------------
+WordPress safe mode is Free self hosted administration and development tool that helps user to fix, hack and manage WordPress, out of the 
+Wordpress itself. 
+
+It helps with migration, backup, fixing, plugin activations, themes, debugging, htaccess modifications and much, much more..
+The WP safe mode tool is an essential for WordPress end users and developers.
+
+
+Features
+-----------------------
+ - Edit options  in wp_config - configuration file - for now only wp debug mode, automatic updater and core automatic updater to enable/disable
+ - Themes Switch - switch existing themes out of the WordPress using this tool 
+ - Download and install Twenty Fifteen theme from wordpress.org repository
+ - Backup database - fully and archive optionally 
+ - Backup database tables - selected tables will be exported in sql and/or csv format and can be archived optionally 
+ - Backup full WordPress installation directory 
+ - Download of backup files 
+
+
+
+Requirements
+-----------------------
+Apache web server
+PHP  5.3.x or newer
+MySQL 5.3.x or newer 
+
+Permissions to write to folder on server 
+Functional WordPress website on server 
+MySQL user with all privileges 
+
+Installation
+-----------------------
+1 - Unpack archive copy the folder in a root directory on your web server where your WordPress is installed, e.g. http://www.yourdomain.com/wordpress-safe-mode
+2 - Copy and rename settings sample file settings.sample.php into settings.php and 
+3 - Set WordPress site directory for $settings['wp_dir'] if it is not in same directory and $settings['sfstore'] for where your backup files will be stored. Rest of data in settings.php don't edit
+4 - Make sure the directory for backup files is writtable and wp_config.php can be edited. 
+5 - Access directly to e.g. http://www.yourdomain.com/wordpress-safe-mode/ 
+
+Change Log
+-----------------------
+
+v0.04
+
+mobile friendly layout 
+minor fixes
+
+v0.03
+
+removed intercom signup, added links for support forum and contact
+added inactive links for coming soon features
+
+v0.02 
+
+Added intercom signup for support and update notifications 
+Few visual UI tweaks 
+
+
+
+
+Authors 
+-----------------------
+
+CloudIndustry - http://cloud-industry.com 
+ Nikola Kirincic, Milutin Gavrilovic,  Marko Tiosavljevic,   Nikola Stojanovic
+
+
+License
+-----------------------
+
+GNU GPL v2.0 or Later 
+
+Note
+-----------------------
+This tool is still in experimental phase. It is recommended to test first in development environment or to backup files first. 
+
+Please do not move branding or links
+
+Please visit http://wpsafemode.com/ to signup and leave a feedback so we can improve our tool and give you even with more features and fixed bugs. 
+
+Best Regards, 
+
+Cloud Industry Team 
+
+
+
+PS. if you see the bug, it's not a bug, it's a feature :) ( by hightech ) 
+
